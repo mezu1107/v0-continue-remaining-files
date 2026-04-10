@@ -25,26 +25,40 @@ const geistMono = Geist_Mono({
 ----------------------------- */
 
 const keywords = [
-  "360 digital solutions Rawalpindi",
-  "digital marketing agency Rawalpindi",
-  "web design company Rawalpindi",
-  "Rawalpindi SEO services",
-  "Rawalpindi social media marketing",
-  "Rawalpindi branding agency",
-  "Rawalpindi ecommerce solutions",
-  "Rawalpindi software development",
-  "Rawalpindi graphic design services",
-  "360 digital solutions Pakistan",
-  "digital marketing agency Pakistan",
+  // Islamabad & Rawalpindi Keywords
+  "web design Islamabad",
+  "digital marketing agency Islamabad",
+  "SEO services Islamabad",
+  "web development Rawalpindi",
+  "digital marketing Rawalpindi",
+  "branding agency Islamabad",
+  "e-commerce solutions Rawalpindi",
+  "software development Islamabad",
+  "graphic design services Rawalpindi",
+  
+  // UK Keywords
+  "web design UK",
+  "digital marketing agency UK",
+  "SEO services UK",
+  "web development London",
+  "UK digital solutions",
+  
+  // Pakistan Regional
+  "digital solutions Pakistan",
+  "web design Pakistan",
+  "digital marketing Pakistan",
   "best SEO services Pakistan",
-  "web design company Pakistan",
-  "social media marketing Pakistan",
+  "web development company Pakistan",
   "branding agency Pakistan",
-  "ecommerce web development Pakistan",
-  "360 digital marketing solutions",
-  "international SEO services",
+  "e-commerce web development Pakistan",
+  
+  // International Keywords
+  "enterprise digital solutions",
   "global web development company",
-  "enterprise CRM solutions",
+  "international SEO services",
+  "CRM software solutions",
+  "digital transformation services",
+  "multi-channel marketing platform",
 ]
 
 /* -----------------------------
@@ -55,12 +69,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://amenterprises.tech"),
 
   title: {
-    default: "AM Enterprises | 360 Digital Solutions Rawalpindi, Islamabad & Worldwide",
+    default: "AM Enterprises | Digital Solutions for Islamabad, Rawalpindi & UK",
     template: "%s | AM Enterprises",
   },
 
   description:
-    "AM Enterprises provides top-notch 360 digital solutions in Rawalpindi, Islamabad and worldwide. Services include Web Design, SEO, Social Media Marketing, Branding, CRM, E-commerce Solutions and Enterprise Software.",
+    "AM Enterprises is a top digital solutions provider serving Islamabad, Rawalpindi, and UK. We offer expert Web Design, SEO, Digital Marketing, Branding, E-commerce, CRM, and Enterprise Software solutions.",
 
   keywords,
 
@@ -74,15 +88,23 @@ export const metadata: Metadata = {
   creator: "AM Enterprises",
   publisher: "AM Enterprises",
 
+  alternates: {
+    canonical: "https://amenterprises.tech",
+  },
+
+  verification: {
+    google: "google-site-verification-code", // Add your actual Google verification code
+  },
+
   icons: {
     icon: "/assets/logo.png",
     apple: "/assets/logo.png",
   },
 
   openGraph: {
-    title: "AM Enterprises | 360 Digital Solutions Rawalpindi & International",
+    title: "AM Enterprises | Digital Solutions & Web Design for Pakistan & UK",
     description:
-      "Grow your business with AM Enterprises – top digital solutions provider for Web Design, SEO, SMM, Branding and Enterprise Software worldwide.",
+      "Professional digital solutions for businesses in Islamabad, Rawalpindi, and UK. Web Design, SEO, Digital Marketing, E-commerce, and Enterprise Software.",
     url: "https://amenterprises.tech",
     siteName: "AM Enterprises",
     images: [
@@ -99,15 +121,32 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "AM Enterprises | 360 Digital Solutions",
+    title: "AM Enterprises | Digital Solutions & Web Design",
     description:
-      "Leading digital solutions company providing Web Development, SEO, Branding and Social Media Marketing worldwide.",
+      "Top digital solutions provider for Islamabad, Rawalpindi, UK. Web Design, SEO, Digital Marketing, E-commerce, and more.",
     images: ["/assets/logo.png"],
+    creator: "@amenterprises",
   },
 
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    themeColor: "#6366f1",
   },
 }
 

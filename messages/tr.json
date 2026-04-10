@@ -1,0 +1,89 @@
+{
+  "common": {
+    "company_name": "AM Enterprises",
+    "company_tagline": "Dijital Çözüm Ortağınız",
+    "phone": "+44-317-3712950",
+    "email": "support@amenterprises.tech",
+    "address": "İslamabad, Ravalpindi, Pakistan ve Birleşik Krallık"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "services": "Hizmetler",
+    "portfolio": "Portföy",
+    "blog": "Blog",
+    "contact": "İletişim",
+    "admin": "Yönetici",
+    "logout": "Çıkış Yap",
+    "login": "Giriş Yap"
+  },
+  "hero": {
+    "main_title": "Online İşletme",
+    "highlight_title": "Varlığınızı Dönüştürün",
+    "subtitle": "Uzman web tasarımı, SEO ve dijital pazarlama çözümlerimizle web sitesi trafiğinizi artırın, satışları yükseltin ve marka görünürlüğünü geliştirin.",
+    "cta_primary": "Projenizi Başlatın",
+    "cta_secondary": "Çalışmalarımızı Görün",
+    "stat_websites": "Teslim Edilen Profesyonel Web Siteleri",
+    "stat_clients": "Dünya Çapında Memnun Müşteriler",
+    "stat_experience": "Yıl Dijital Deneyim",
+    "stat_satisfaction": "Müşteri Memnuniyet Oranı"
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "İşletmeniz İçin Kapsamlı Dijital Çözümler",
+    "web_design": "Web Tasarımı",
+    "web_design_desc": "Ziyaretçileri müşteriye dönüştüren güzel, duyarlı web siteleri",
+    "seo": "SEO Optimizasyonu",
+    "seo_desc": "Google'da daha yüksek sıralamalar ve organik trafik",
+    "digital_marketing": "Dijital Pazarlama",
+    "digital_marketing_desc": "Hedef kitlenize ulaşmak için stratejik kampanyalar",
+    "branding": "Markalaşma",
+    "branding_desc": "Unutulmaz bir marka kimliği yaratın",
+    "ecommerce": "E-Ticaret Çözümleri",
+    "ecommerce_desc": "Çevrimiçi mağazanızı oluşturun ve ölçekleyin",
+    "crm": "CRM Sistemleri",
+    "crm_desc": "Müşteri ilişkilerini etkili bir şekilde yönetin"
+  },
+  "tickets": {
+    "title": "Destek Biletleri",
+    "create_ticket": "Bilet Oluştur",
+    "ticket_number": "Bilet Numarası",
+    "status": "Durum",
+    "priority": "Öncelik",
+    "open": "Açık",
+    "in_progress": "Devam Ediyor",
+    "resolved": "Çözüldü",
+    "closed": "Kapalı",
+    "low": "Düşük",
+    "medium": "Orta",
+    "high": "Yüksek",
+    "urgent": "Acil"
+  },
+  "admin": {
+    "dashboard": "Yönetici Paneli",
+    "users": "Kullanıcılar",
+    "tickets": "Biletler",
+    "content": "İçerik",
+    "analytics": "Analizler",
+    "settings": "Ayarlar",
+    "modules": "Modüller",
+    "total_users": "Toplam Kullanıcı",
+    "total_tickets": "Toplam Bilet",
+    "pending_tickets": "Beklemede Biletler",
+    "revenue": "Gelir"
+  },
+  "footer": {
+    "company": "Şirket",
+    "services": "Hizmetler",
+    "support": "Destek",
+    "legal": "Yasal",
+    "privacy_policy": "Gizlilik Politikası",
+    "terms_of_service": "Hizmet Şartları",
+    "copyright": "© 2024 AM Enterprises. Tüm hakları saklıdır."
+  },
+  "errors": {
+    "not_found": "Sayfa bulunamadı",
+    "unauthorized": "Yetkisiz erişim",
+    "server_error": "Sunucu hatası oluştu"
+  }
+}

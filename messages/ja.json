@@ -1,0 +1,89 @@
+{
+  "common": {
+    "company_name": "AM Enterprises",
+    "company_tagline": "あなたのデジタルソリューションパートナー",
+    "phone": "+44-317-3712950",
+    "email": "support@amenterprises.tech",
+    "address": "イスラマバード、ラワルピンディ、パキスタン＆英国"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "about": "について",
+    "services": "サービス",
+    "portfolio": "ポートフォリオ",
+    "blog": "ブログ",
+    "contact": "お問い合わせ",
+    "admin": "管理者",
+    "logout": "ログアウト",
+    "login": "ログイン"
+  },
+  "hero": {
+    "main_title": "あなたのオンライン",
+    "highlight_title": "ビジネスの存在を変える",
+    "subtitle": "当社の専門的なウェブデザイン、SEO、デジタルマーケティングソリューションで、ウェブサイトのトラフィックを増やし、売上を増加させ、ブランドの認知度を向上させます。",
+    "cta_primary": "プロジェクトを開始",
+    "cta_secondary": "当社の作品を表示",
+    "stat_websites": "納入されたプロフェッショナルウェブサイト",
+    "stat_clients": "世界中の満足した顧客",
+    "stat_experience": "年のデジタル経験",
+    "stat_satisfaction": "顧客満足度"
+  },
+  "services": {
+    "title": "当社のサービス",
+    "subtitle": "ビジネスのための包括的なデジタルソリューション",
+    "web_design": "ウェブデザイン",
+    "web_design_desc": "訪問者を顧客に変える美しく反応的なウェブサイト",
+    "seo": "SEO最適化",
+    "seo_desc": "Googleでのランキングが高く、オーガニックトラフィックを獲得",
+    "digital_marketing": "デジタルマーケティング",
+    "digital_marketing_desc": "ターゲットオーディエンスに到達するための戦略的キャンペーン",
+    "branding": "ブランディング",
+    "branding_desc": "忘れられないブランドアイデンティティを作成",
+    "ecommerce": "e-コマースソリューション",
+    "ecommerce_desc": "オンラインストアを構築およびスケーリング",
+    "crm": "CRMシステム",
+    "crm_desc": "顧客関係を効果的に管理"
+  },
+  "tickets": {
+    "title": "サポートチケット",
+    "create_ticket": "チケットを作成",
+    "ticket_number": "チケット番号",
+    "status": "ステータス",
+    "priority": "優先度",
+    "open": "開く",
+    "in_progress": "進行中",
+    "resolved": "解決済み",
+    "closed": "閉じられた",
+    "low": "低い",
+    "medium": "中程度",
+    "high": "高い",
+    "urgent": "緊急"
+  },
+  "admin": {
+    "dashboard": "管理者ダッシュボード",
+    "users": "ユーザー",
+    "tickets": "チケット",
+    "content": "コンテンツ",
+    "analytics": "分析",
+    "settings": "設定",
+    "modules": "モジュール",
+    "total_users": "総ユーザー数",
+    "total_tickets": "総チケット数",
+    "pending_tickets": "保留中のチケット",
+    "revenue": "収入"
+  },
+  "footer": {
+    "company": "会社",
+    "services": "サービス",
+    "support": "サポート",
+    "legal": "法的",
+    "privacy_policy": "プライバシーポリシー",
+    "terms_of_service": "利用規約",
+    "copyright": "© 2024 AM Enterprises。著作権所有。"
+  },
+  "errors": {
+    "not_found": "ページが見つかりません",
+    "unauthorized": "不正アクセス",
+    "server_error": "サーバーエラーが発生しました"
+  }
+}

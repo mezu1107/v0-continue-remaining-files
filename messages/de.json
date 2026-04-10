@@ -1,0 +1,89 @@
+{
+  "common": {
+    "company_name": "AM Enterprises",
+    "company_tagline": "Ihr Digital-Lösungspartner",
+    "phone": "+44-317-3712950",
+    "email": "support@amenterprises.tech",
+    "address": "Islamabad, Rawalpindi, Pakistan & UK"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "admin": "Admin",
+    "logout": "Abmelden",
+    "login": "Anmelden"
+  },
+  "hero": {
+    "main_title": "Transformieren Sie Ihre",
+    "highlight_title": "Online-Geschäftspräsenz",
+    "subtitle": "Steigern Sie Ihren Website-Verkehr, erhöhen Sie Ihren Umsatz und verbessern Sie Ihre Markenbekanntheit mit unseren Experten-Lösungen für Webdesign, SEO und digitales Marketing.",
+    "cta_primary": "Projekt starten",
+    "cta_secondary": "Unsere Arbeiten anschauen",
+    "stat_websites": "Professionelle Websites erstellt",
+    "stat_clients": "Zufriedene Kunden weltweit",
+    "stat_experience": "Jahre Erfahrung im Digital",
+    "stat_satisfaction": "Kundenzufriedenheitsquote"
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Umfassende digitale Lösungen für Ihr Unternehmen",
+    "web_design": "Webdesign",
+    "web_design_desc": "Wunderschöne, responsive Websites, die Besucher in Kunden umwandeln",
+    "seo": "SEO-Optimierung",
+    "seo_desc": "Höhere Platzierung bei Google und organischer Traffic für Ihre Website",
+    "digital_marketing": "Digitales Marketing",
+    "digital_marketing_desc": "Strategische Kampagnen, um Ihre Zielgruppe zu erreichen",
+    "branding": "Branding",
+    "branding_desc": "Schaffen Sie eine unvergessliche Markenidentität",
+    "ecommerce": "E-Commerce-Lösungen",
+    "ecommerce_desc": "Bauen und skalieren Sie Ihren Online-Shop",
+    "crm": "CRM-Systeme",
+    "crm_desc": "Verwalten Sie Kundenbeziehungen effektiv"
+  },
+  "tickets": {
+    "title": "Support-Tickets",
+    "create_ticket": "Ticket erstellen",
+    "ticket_number": "Ticketnummer",
+    "status": "Status",
+    "priority": "Priorität",
+    "open": "Offen",
+    "in_progress": "In Bearbeitung",
+    "resolved": "Gelöst",
+    "closed": "Geschlossen",
+    "low": "Niedrig",
+    "medium": "Mittel",
+    "high": "Hoch",
+    "urgent": "Dringend"
+  },
+  "admin": {
+    "dashboard": "Admin-Dashboard",
+    "users": "Benutzer",
+    "tickets": "Tickets",
+    "content": "Inhalt",
+    "analytics": "Analytik",
+    "settings": "Einstellungen",
+    "modules": "Module",
+    "total_users": "Gesamtzahl Benutzer",
+    "total_tickets": "Gesamtzahl Tickets",
+    "pending_tickets": "Ausstehende Tickets",
+    "revenue": "Umsatz"
+  },
+  "footer": {
+    "company": "Unternehmen",
+    "services": "Dienstleistungen",
+    "support": "Unterstützung",
+    "legal": "Rechtliches",
+    "privacy_policy": "Datenschutzrichtlinie",
+    "terms_of_service": "Nutzungsbedingungen",
+    "copyright": "© 2024 AM Enterprises. Alle Rechte vorbehalten."
+  },
+  "errors": {
+    "not_found": "Seite nicht gefunden",
+    "unauthorized": "Unerlaubter Zugriff",
+    "server_error": "Ein Serverfehler ist aufgetreten"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "common": {
+    "company_name": "AM Enterprises",
+    "company_tagline": "آپ کے ڈیجیٹل حل کے ساتھی",
+    "phone": "+44-317-3712950",
+    "email": "support@amenterprises.tech",
+    "address": "اسلام آباد، راولپنڈی، پاکستان اور برطانیہ"
+  },
+  "navigation": {
+    "home": "ہوم",
+    "about": "ہمارے بارے میں",
+    "services": "خدمات",
+    "portfolio": "پورٹ فولیو",
+    "blog": "بلاگ",
+    "contact": "رابطہ",
+    "admin": "ایڈمن",
+    "logout": "لاگ آؤٹ",
+    "login": "لاگ ان"
+  },
+  "hero": {
+    "main_title": "اپنے آن لائن",
+    "highlight_title": "کاروباری موجودگی کو تبدیل کریں",
+    "subtitle": "ہمارے ماہر ویب ڈیزائن، SEO اور ڈیجیٹل مارکیٹنگ حل کے ذریعے اپنی ویب سائٹ کی ٹریفک بڑھائیں، فروخت میں اضافہ کریں اور برانڈ کی نمائندگی بہتر بنائیں۔",
+    "cta_primary": "اپنا پروجیکٹ شروع کریں",
+    "cta_secondary": "ہمارے کام کو دیکھیں",
+    "stat_websites": "ڈیلیور کی گئی پروفیشنل ویب سائٹیں",
+    "stat_clients": "دنیا بھر میں مطمئن کلائنٹ",
+    "stat_experience": "سال ڈیجیٹل تجربہ",
+    "stat_satisfaction": "کلائنٹ مطمئنی کی شرح"
+  },
+  "services": {
+    "title": "ہماری خدمات",
+    "subtitle": "آپ کے کاروبار کے لیے جامع ڈیجیٹل حل",
+    "web_design": "ویب ڈیزائن",
+    "web_design_desc": "خوبصورت، جوابدہی ویب سائٹیں جو وزٹرز کو کسٹمر میں تبدیل کریں",
+    "seo": "SEO اضافیے",
+    "seo_desc": "Google میں بہتر درجہ بندی اور آرگنک ٹریفک",
+    "digital_marketing": "ڈیجیٹل مارکیٹنگ",
+    "digital_marketing_desc": "اپنے ہدف دونی تک پہنچنے کے لیے حکمت عملی کی مہم",
+    "branding": "برانڈنگ",
+    "branding_desc": "ایک ناقابلِ فراموش برانڈ شناخت بنائیں",
+    "ecommerce": "ای کمرس حل",
+    "ecommerce_desc": "اپنا آن لائن اسٹور بنائیں اور بڑھائیں",
+    "crm": "CRM سسٹمز",
+    "crm_desc": "کسٹمر تعلقات کو مؤثر طریقے سے منظم کریں"
+  },
+  "tickets": {
+    "title": "سپورٹ ٹکٹس",
+    "create_ticket": "ٹکٹ بنائیں",
+    "ticket_number": "ٹکٹ نمبر",
+    "status": "حالت",
+    "priority": "ترجیح",
+    "open": "کھلا",
+    "in_progress": "جاری",
+    "resolved": "حل ہوگیا",
+    "closed": "بند",
+    "low": "کم",
+    "medium": "درمیانہ",
+    "high": "زیادہ",
+    "urgent": "فوری"
+  },
+  "admin": {
+    "dashboard": "ایڈمن ڈیشبورڈ",
+    "users": "صارفین",
+    "tickets": "ٹکٹس",
+    "content": "مواد",
+    "analytics": "تجزیات",
+    "settings": "ترتیبات",
+    "modules": "ماڈیولز",
+    "total_users": "کل صارفین",
+    "total_tickets": "کل ٹکٹس",
+    "pending_tickets": "زیرِ التوا ٹکٹس",
+    "revenue": "آمدن"
+  },
+  "footer": {
+    "company": "کمپنی",
+    "services": "خدمات",
+    "support": "سپورٹ",
+    "legal": "قانونی",
+    "privacy_policy": "نجی پالیسی",
+    "terms_of_service": "خدمت کی شرائط",
+    "copyright": "© 2024 AM Enterprises۔ تمام حقوق محفوظ ہیں۔"
+  },
+  "errors": {
+    "not_found": "صفحہ نہیں ملا",
+    "unauthorized": "غیر اختیار یافتہ رسائی",
+    "server_error": "سرور کی خرابی واقع ہوئی"
+  }
+}

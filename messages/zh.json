@@ -1,0 +1,89 @@
+{
+  "common": {
+    "company_name": "AM Enterprises",
+    "company_tagline": "您的数字解决方案合作伙伴",
+    "phone": "+44-317-3712950",
+    "email": "support@amenterprises.tech",
+    "address": "伊斯兰堡、拉瓦尔品第（巴基斯坦）和英国"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "portfolio": "作品集",
+    "blog": "博客",
+    "contact": "联系",
+    "admin": "管理员",
+    "logout": "登出",
+    "login": "登录"
+  },
+  "hero": {
+    "main_title": "改变您的",
+    "highlight_title": "在线业务形象",
+    "subtitle": "通过我们的专业网页设计、SEO和数字营销解决方案，增加网站流量、提高销售额并增强品牌知名度。",
+    "cta_primary": "开始您的项目",
+    "cta_secondary": "查看我们的作品",
+    "stat_websites": "已交付的专业网站",
+    "stat_clients": "满意的全球客户",
+    "stat_experience": "年数字经验",
+    "stat_satisfaction": "客户满意度"
+  },
+  "services": {
+    "title": "我们的服务",
+    "subtitle": "为您的业务提供全面的数字解决方案",
+    "web_design": "网页设计",
+    "web_design_desc": "美观、响应式网站，将访问者转化为客户",
+    "seo": "SEO优化",
+    "seo_desc": "在Google上排名更高并为您的网站带来有机流量",
+    "digital_marketing": "数字营销",
+    "digital_marketing_desc": "战略性活动以触达您的目标受众",
+    "branding": "品牌建设",
+    "branding_desc": "创建难忘的品牌身份",
+    "ecommerce": "电子商务解决方案",
+    "ecommerce_desc": "构建和扩展您的在线商店",
+    "crm": "CRM系统",
+    "crm_desc": "有效管理客户关系"
+  },
+  "tickets": {
+    "title": "支持工单",
+    "create_ticket": "创建工单",
+    "ticket_number": "工单编号",
+    "status": "状态",
+    "priority": "优先级",
+    "open": "开放",
+    "in_progress": "进行中",
+    "resolved": "已解决",
+    "closed": "已关闭",
+    "low": "低",
+    "medium": "中",
+    "high": "高",
+    "urgent": "紧急"
+  },
+  "admin": {
+    "dashboard": "管理员仪表板",
+    "users": "用户",
+    "tickets": "工单",
+    "content": "内容",
+    "analytics": "分析",
+    "settings": "设置",
+    "modules": "模块",
+    "total_users": "总用户数",
+    "total_tickets": "总工单数",
+    "pending_tickets": "待处理工单",
+    "revenue": "收入"
+  },
+  "footer": {
+    "company": "公司",
+    "services": "服务",
+    "support": "支持",
+    "legal": "法律",
+    "privacy_policy": "隐私政策",
+    "terms_of_service": "服务条款",
+    "copyright": "© 2024 AM Enterprises。版权所有。"
+  },
+  "errors": {
+    "not_found": "页面未找到",
+    "unauthorized": "未授权访问",
+    "server_error": "发生服务器错误"
+  }
+}

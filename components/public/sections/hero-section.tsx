@@ -3,12 +3,19 @@
 import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import dynamic from "next/dynamic"
 import { motion, Variants } from "framer-motion"
 import { ArrowRight, Play, Sparkles, Zap, Cpu, Code, Globe } from "lucide-react"
 import heroBg from "@/app/assets/hero-bg.jpg"
 import { Button } from "@/components/ui/button"
 import { ParticlesBackground } from "@/components/public/particles-background"
 import Head from "next/head"
+
+// Dynamically import 3D scene to avoid SSR issues
+const Hero3DScene = dynamic(() => import("./hero-3d-scene").then((m) => ({ default: m.Hero3DScene })), {
+  ssr: false,
+  loading: () => <div className="w-full h-full bg-gradient-to-br from-indigo-500/10 to-pink-500/10" />,
+})
 
 // Stats data
 const stats = [
@@ -133,17 +140,24 @@ export function HeroSection() {
         id="home"
         className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
       >
-        {/* Background */}
+        {/* 3D Background Scene */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-hero opacity-90 animate-gradient" />
+          <div className="absolute inset-0 w-full h-full">
+            <Hero3DScene />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background" />
+        </div>
+
+        {/* Fallback Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-hero opacity-50 animate-gradient" />
           <Image
             src={heroBg}
             alt="Professional Web Design and Digital Marketing"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-10"
             fill
           />
           <ParticlesBackground />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
         </div>
 
         {/* Floating Icons */}

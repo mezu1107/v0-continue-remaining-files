@@ -1,0 +1,89 @@
+{
+  "common": {
+    "company_name": "AM Enterprises",
+    "company_tagline": "Your Digital Solutions Partner",
+    "phone": "+44-317-3712950",
+    "email": "support@amenterprises.tech",
+    "address": "Islamabad, Rawalpindi, Pakistan & UK"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact",
+    "admin": "Admin",
+    "logout": "Logout",
+    "login": "Login"
+  },
+  "hero": {
+    "main_title": "Transform Your",
+    "highlight_title": "Online Business Presence",
+    "subtitle": "Boost your website traffic, increase sales, and enhance your brand visibility with our expert web design, SEO, and digital marketing solutions.",
+    "cta_primary": "Start Your Project",
+    "cta_secondary": "View Our Work",
+    "stat_websites": "Professional Websites Delivered",
+    "stat_clients": "Satisfied Clients Worldwide",
+    "stat_experience": "Years of Digital Experience",
+    "stat_satisfaction": "Client Satisfaction Rate"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Digital Solutions for Your Business",
+    "web_design": "Web Design",
+    "web_design_desc": "Beautiful, responsive websites that convert visitors into customers",
+    "seo": "SEO Optimization",
+    "seo_desc": "Rank higher on Google and drive organic traffic to your site",
+    "digital_marketing": "Digital Marketing",
+    "digital_marketing_desc": "Strategic campaigns to reach your target audience",
+    "branding": "Branding",
+    "branding_desc": "Create a memorable brand identity",
+    "ecommerce": "E-Commerce Solutions",
+    "ecommerce_desc": "Build and scale your online store",
+    "crm": "CRM Systems",
+    "crm_desc": "Manage customer relationships effectively"
+  },
+  "tickets": {
+    "title": "Support Tickets",
+    "create_ticket": "Create Ticket",
+    "ticket_number": "Ticket Number",
+    "status": "Status",
+    "priority": "Priority",
+    "open": "Open",
+    "in_progress": "In Progress",
+    "resolved": "Resolved",
+    "closed": "Closed",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "urgent": "Urgent"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "users": "Users",
+    "tickets": "Tickets",
+    "content": "Content",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "modules": "Modules",
+    "total_users": "Total Users",
+    "total_tickets": "Total Tickets",
+    "pending_tickets": "Pending Tickets",
+    "revenue": "Revenue"
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "support": "Support",
+    "legal": "Legal",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "copyright": "© 2024 AM Enterprises. All rights reserved."
+  },
+  "errors": {
+    "not_found": "Page not found",
+    "unauthorized": "Unauthorized access",
+    "server_error": "Server error occurred"
+  }
+}
