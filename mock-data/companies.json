@@ -1,0 +1,5 @@
+[
+  {"id":1,"name":"AM Enterprises","logo":"AME","industry":"Technology","address":"123 Tech Park, Silicon Valley, CA","email":"info@amenterprises.com","phone":"+1-555-0100","currency":"USD","timezone":"America/Los_Angeles"},
+  {"id":2,"name":"AM Digital","logo":"AMD","industry":"Digital Marketing","address":"456 Marketing Ave, New York, NY","email":"info@amdigital.com","phone":"+1-555-0200","currency":"USD","timezone":"America/New_York"},
+  {"id":3,"name":"AM Global","logo":"AMG","industry":"Consulting","address":"789 Business Blvd, London, UK","email":"info@amglobal.com","phone":"+44-20-7946-0958","currency":"GBP","timezone":"Europe/London"}
+]

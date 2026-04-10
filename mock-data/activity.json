@@ -1,0 +1,12 @@
+[
+  {"id":1,"userId":1,"action":"Created new project","target":"Website Redesign","time":"2026-02-27T09:30:00Z","type":"project"},
+  {"id":2,"userId":2,"action":"Updated client details","target":"TechCorp Inc.","time":"2026-02-27T09:15:00Z","type":"client"},
+  {"id":3,"userId":3,"action":"Completed task","target":"Design Mockups","time":"2026-02-27T08:45:00Z","type":"task"},
+  {"id":4,"userId":1,"action":"Sent invoice","target":"INV-002","time":"2026-02-27T08:30:00Z","type":"invoice"},
+  {"id":5,"userId":2,"action":"Added new lead","target":"John Smith","time":"2026-02-27T08:00:00Z","type":"lead"},
+  {"id":6,"userId":5,"action":"Resolved ticket","target":"API rate limit exceeded","time":"2026-02-26T17:00:00Z","type":"ticket"},
+  {"id":7,"userId":3,"action":"Pushed code update","target":"Mobile App v2","time":"2026-02-26T16:30:00Z","type":"project"},
+  {"id":8,"userId":1,"action":"Updated company settings","target":"AM Enterprises","time":"2026-02-26T15:00:00Z","type":"settings"},
+  {"id":9,"userId":6,"action":"Submitted proposal","target":"CRM Integration","time":"2026-02-26T14:00:00Z","type":"proposal"},
+  {"id":10,"userId":2,"action":"Scheduled follow-up","target":"Omar Hassan","time":"2026-02-26T13:00:00Z","type":"lead"}
+]

@@ -1,0 +1,8 @@
+[
+  {"id":1,"invoiceNumber":"INV-001","clientId":1,"companyId":1,"amount":15000,"tax":1350,"discount":500,"total":15850,"status":"paid","issueDate":"2026-01-15","dueDate":"2026-02-15","items":[{"description":"Website Design","quantity":1,"rate":8000,"amount":8000},{"description":"Frontend Dev","quantity":1,"rate":7000,"amount":7000}]},
+  {"id":2,"invoiceNumber":"INV-002","clientId":2,"companyId":1,"amount":25000,"tax":2250,"discount":0,"total":27250,"status":"pending","issueDate":"2026-02-01","dueDate":"2026-03-01","items":[{"description":"Mobile App Phase 1","quantity":1,"rate":25000,"amount":25000}]},
+  {"id":3,"invoiceNumber":"INV-003","clientId":3,"companyId":2,"amount":5000,"tax":450,"discount":200,"total":5250,"status":"overdue","issueDate":"2025-12-01","dueDate":"2026-01-01","items":[{"description":"SEO Audit","quantity":1,"rate":3000,"amount":3000},{"description":"Keyword Research","quantity":1,"rate":2000,"amount":2000}]},
+  {"id":4,"invoiceNumber":"INV-004","clientId":6,"companyId":1,"amount":40000,"tax":3600,"discount":1000,"total":42600,"status":"paid","issueDate":"2025-11-01","dueDate":"2025-12-01","items":[{"description":"Cloud Migration Phase 1","quantity":1,"rate":40000,"amount":40000}]},
+  {"id":5,"invoiceNumber":"INV-005","clientId":5,"companyId":2,"amount":12000,"tax":1080,"discount":0,"total":13080,"status":"paid","issueDate":"2026-01-20","dueDate":"2026-02-20","items":[{"description":"CRM Setup","quantity":1,"rate":12000,"amount":12000}]},
+  {"id":6,"invoiceNumber":"INV-006","clientId":1,"companyId":1,"amount":7500,"tax":675,"discount":0,"total":8175,"status":"draft","issueDate":"2026-02-25","dueDate":"2026-03-25","items":[{"description":"Maintenance Q1","quantity":1,"rate":7500,"amount":7500}]}
+]

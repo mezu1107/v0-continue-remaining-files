@@ -1,0 +1,7 @@
+[
+  {"id":1,"title":"Web Development Agreement","clientId":1,"companyId":1,"status":"active","startDate":"2025-12-01","endDate":"2026-06-01","value":45000,"template":"standard","signed":true},
+  {"id":2,"title":"Mobile App Development Contract","clientId":2,"companyId":1,"status":"active","startDate":"2026-01-10","endDate":"2026-12-31","value":80000,"template":"enterprise","signed":true},
+  {"id":3,"title":"SEO Service Agreement","clientId":3,"companyId":2,"status":"expired","startDate":"2025-06-01","endDate":"2025-12-31","value":15000,"template":"standard","signed":true},
+  {"id":4,"title":"Cloud Infrastructure Contract","clientId":6,"companyId":1,"status":"active","startDate":"2025-10-15","endDate":"2026-10-15","value":120000,"template":"enterprise","signed":true},
+  {"id":5,"title":"CRM Integration Agreement","clientId":5,"companyId":2,"status":"pending","startDate":"2026-03-01","endDate":"2026-09-01","value":35000,"template":"standard","signed":false}
+]

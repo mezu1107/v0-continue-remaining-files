@@ -1,0 +1,7 @@
+[
+  {"id":1,"name":"Web Development","category":"Development","description":"Custom web applications built with modern frameworks","pricing":{"basic":5000,"pro":15000,"enterprise":40000},"features":["Responsive Design","SEO Optimization","CMS Integration","API Development","Testing & QA"],"active":true,"companyId":1},
+  {"id":2,"name":"Mobile App Development","category":"Development","description":"Native and cross-platform mobile applications","pricing":{"basic":10000,"pro":30000,"enterprise":80000},"features":["iOS & Android","Push Notifications","Offline Mode","App Store Submission"],"active":true,"companyId":1},
+  {"id":3,"name":"Digital Marketing","category":"Marketing","description":"Comprehensive digital marketing campaigns","pricing":{"basic":2000,"pro":5000,"enterprise":12000},"features":["SEO","Social Media","PPC Campaigns","Content Marketing","Analytics"],"active":true,"companyId":2},
+  {"id":4,"name":"Cloud Infrastructure","category":"Infrastructure","description":"Cloud setup, migration, and management","pricing":{"basic":3000,"pro":8000,"enterprise":25000},"features":["AWS/Azure/GCP","CI/CD Pipeline","Monitoring","Security Audit"],"active":true,"companyId":1},
+  {"id":5,"name":"UI/UX Design","category":"Design","description":"User-centered design for digital products","pricing":{"basic":3000,"pro":8000,"enterprise":20000},"features":["User Research","Wireframing","Prototyping","Design System","Usability Testing"],"active":false,"companyId":2}
+]

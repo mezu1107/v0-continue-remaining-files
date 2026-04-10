@@ -1,0 +1,7 @@
+[
+  {"id":1,"title":"Getting Started Guide","category":"Onboarding","content":"Welcome to AM Enterprises. This guide will help you get started with our platform. First, set up your profile...","author":"Amir Khan","companyId":1,"updatedAt":"2026-02-20"},
+  {"id":2,"title":"Project Management Best Practices","category":"Workflows","content":"Effective project management requires clear communication, well-defined milestones, and regular check-ins...","author":"Sara Malik","companyId":1,"updatedAt":"2026-02-18"},
+  {"id":3,"title":"API Documentation","category":"Technical","content":"Our REST API uses JSON format. Authentication is handled via Bearer tokens. Base URL: https://api.amenterprises.com/v1...","author":"Dev Patel","companyId":1,"updatedAt":"2026-02-15"},
+  {"id":4,"title":"Security Policies","category":"Security","content":"All employees must follow these security guidelines: Use strong passwords, enable 2FA, never share credentials...","author":"Amir Khan","companyId":1,"updatedAt":"2026-02-10"},
+  {"id":5,"title":"Client Communication Guidelines","category":"Workflows","content":"When communicating with clients, always be professional, respond within 24 hours, and document all interactions...","author":"Nadia Raza","companyId":2,"updatedAt":"2026-02-05"}
+]

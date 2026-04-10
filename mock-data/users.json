@@ -1,0 +1,8 @@
+[
+  {"id":1,"name":"Amir Khan","email":"admin@amenterprises.com","password":"admin123","role":"Admin","avatar":"AK","status":"active","lastLogin":"2026-02-25T10:30:00Z","companyId":1},
+  {"id":2,"name":"Sara Malik","email":"manager@amenterprises.com","password":"manager123","role":"Manager","avatar":"SM","status":"active","lastLogin":"2026-02-24T14:00:00Z","companyId":1},
+  {"id":3,"name":"Dev Patel","email":"dev@amenterprises.com","password":"dev123","role":"Dev","avatar":"DP","status":"active","lastLogin":"2026-02-23T09:15:00Z","companyId":1},
+  {"id":4,"name":"Client User","email":"client@example.com","password":"client123","role":"Client","avatar":"CU","status":"active","lastLogin":"2026-02-22T16:45:00Z","companyId":1},
+  {"id":5,"name":"Nadia Raza","email":"nadia@amenterprises.com","password":"nadia123","role":"Manager","avatar":"NR","status":"active","lastLogin":"2026-02-21T11:00:00Z","companyId":2},
+  {"id":6,"name":"Ahmed Ali","email":"ahmed@amenterprises.com","password":"ahmed123","role":"Dev","avatar":"AA","status":"inactive","lastLogin":"2026-01-15T08:30:00Z","companyId":2}
+]
