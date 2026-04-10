@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
 import { motion, Variants } from "framer-motion"
-import { ArrowRight, Play, Sparkles, Zap, Cpu, Code, Globe } from "lucide-react"
+import { ArrowRight, Play, Sparkles, Zap, Cpu, Code, Globe, Ticket, MessageSquare, TrendingUp } from "lucide-react"
 import heroBg from "@/app/assets/hero-bg.jpg"
 import { Button } from "@/components/ui/button"
 import { ParticlesBackground } from "@/components/public/particles-background"
@@ -65,16 +65,20 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   )
 }
 
-// Floating Icons data
+// Floating Icons data with improved positioning and animations
 const floatingIcons: {
   Icon: React.ComponentType<{ className?: string }>
   delay: number
   position: string
+  label: string
+  color: string
 }[] = [
-  { Icon: Zap, delay: 0, position: "top-10 left-10" },
-  { Icon: Cpu, delay: 0.5, position: "top-1/3 right-20" },
-  { Icon: Code, delay: 1, position: "bottom-1/4 left-1/3" },
-  { Icon: Globe, delay: 1.5, position: "bottom-10 right-10" },
+  { Icon: Zap, delay: 0, position: "top-20 left-5 md:left-20", label: "Fast", color: "text-yellow-500" },
+  { Icon: MessageSquare, delay: 0.3, position: "top-1/4 right-5 md:right-32", label: "Chat", color: "text-blue-500" },
+  { Icon: Code, delay: 0.6, position: "bottom-1/3 left-8 md:left-16", label: "Dev", color: "text-purple-500" },
+  { Icon: Ticket, delay: 0.9, position: "bottom-20 right-5 md:right-20", label: "Support", color: "text-green-500" },
+  { Icon: TrendingUp, delay: 1.2, position: "top-1/2 left-2 md:left-10", label: "Growth", color: "text-emerald-500" },
+  { Icon: Globe, delay: 1.5, position: "bottom-10 right-10 md:right-40", label: "Global", color: "text-cyan-500" },
 ]
 
 // Animation Variants
@@ -161,22 +165,46 @@ export function HeroSection() {
         </div>
 
         {/* Floating Icons */}
-        {floatingIcons.map(({ Icon, delay, position }, index) => (
+        {floatingIcons.map(({ Icon, delay, position, label, color }, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 0.6, y: 0 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 0.7, scale: 1 }}
             transition={{
               delay,
-              duration: 1,
+              duration: 0.8,
               repeat: Infinity,
               repeatType: "reverse",
-              repeatDelay: 2,
+              repeatDelay: 3,
             }}
-            className={`absolute ${position} hidden lg:block`}
+            whileHover={{ scale: 1.15, opacity: 1 }}
+            className={`absolute ${position} hidden lg:block z-20 group cursor-pointer`}
           >
-            <div className="p-4 bg-card/50 backdrop-blur-sm rounded-2xl shadow-glow">
-              <Icon className="w-8 h-8 text-primary" />
+            <div className="relative">
+              <motion.div
+                className={`p-4 bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 ${color}`}
+                animate={{
+                  boxShadow: [
+                    "0 0 20px rgba(99, 102, 241, 0.1)",
+                    "0 0 40px rgba(99, 102, 241, 0.2)",
+                    "0 0 20px rgba(99, 102, 241, 0.1)",
+                  ],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <Icon className="w-6 h-6" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                whileHover={{ opacity: 1, y: -5 }}
+                className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 bg-foreground text-background text-xs font-semibold rounded-md whitespace-nowrap pointer-events-none"
+              >
+                {label}
+              </motion.div>
             </div>
           </motion.div>
         ))}

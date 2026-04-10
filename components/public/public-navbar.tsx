@@ -2,14 +2,29 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, Moon, Sun } from "lucide-react"
+import { Menu, Moon, Sun, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { cn } from "@/lib/utils"
 import logo from "@/app/assets/logo.png"
 import Image from "next/image"
+
+const languages = [
+  { code: "en", label: "English", flag: "🇺🇸" },
+  { code: "de", label: "Deutsch", flag: "🇩🇪" },
+  { code: "zh", label: "中文", flag: "🇨🇳" },
+  { code: "tr", label: "Türkçe", flag: "🇹🇷" },
+  { code: "ja", label: "日本語", flag: "🇯🇵" },
+  { code: "ur", label: "اردو", flag: "🇵🇰" },
+]
 
 const navLinks = [
   { href: "/Home", label: "Home" },
@@ -24,8 +39,10 @@ const navLinks = [
 
 export function PublicNavbar() {
   const pathname = usePathname()
+  const router = useRouter()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isDark, setIsDark] = useState(true)
+  const [currentLanguage, setCurrentLanguage] = useState("en")
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -48,6 +65,18 @@ export function PublicNavbar() {
       document.documentElement.classList.remove("dark")
     }
   }, [])
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language") || "en"
+    setCurrentLanguage(savedLang)
+  }, [])
+
+  const handleLanguageChange = (langCode: string) => {
+    setCurrentLanguage(langCode)
+    localStorage.setItem("language", langCode)
+    // Reload page to apply language changes
+    window.location.reload()
+  }
 
   const toggleTheme = () => {
     setIsDark((prev) => {
@@ -120,6 +149,30 @@ export function PublicNavbar() {
 
             {/* Right Side */}
             <div className="flex items-center gap-2">
+
+              {/* Language Toggle */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="size-9">
+                    <Globe className="size-5" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-40">
+                  {languages.map((lang) => (
+                    <DropdownMenuItem
+                      key={lang.code}
+                      onClick={() => handleLanguageChange(lang.code)}
+                      className={cn(
+                        "cursor-pointer",
+                        currentLanguage === lang.code && "bg-primary/10 text-primary"
+                      )}
+                    >
+                      <span className="mr-2">{lang.flag}</span>
+                      {lang.label}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* Theme Toggle */}
               <Button

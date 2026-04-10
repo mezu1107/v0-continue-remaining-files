@@ -37,6 +37,7 @@
  */
 
 import { useState } from "react"
+import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -45,7 +46,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { createClient } from "@/lib/supabase/client"
 import { toast } from "sonner"
-import { MessageCircle, FileText, Loader2, X, Headphones } from "lucide-react"
+import { MessageCircle, FileText, Loader2, X, Headphones, Ticket } from "lucide-react"
 import {
     Dialog,
     DialogContent,
@@ -246,6 +247,23 @@ export function FloatingActionMenu() {
                                 <Headphones className="h-6 w-6 text-white" />
                             </Button>
                         </motion.div>
+
+                        {/* 2.5 SUPPORT TICKET ICON (GREEN) */}
+                        <Link href="/tickets">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0, y: 20 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0, y: 20 }}
+                                transition={{ delay: 0.25 }}
+                            >
+                                <Button 
+                                    className="rounded-full h-12 w-12 bg-green-600 hover:bg-green-700 shadow-xl"
+                                    title="Submit Support Ticket"
+                                >
+                                    <Ticket className="h-6 w-6 text-white" />
+                                </Button>
+                            </motion.div>
+                        </Link>
 
                         {/* 3. PROPOSAL FORM ICON (BLUE) */}
                         <Dialog open={proposalOpen} onOpenChange={setProposalOpen}>
