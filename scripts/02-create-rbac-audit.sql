@@ -2,8 +2,14 @@
 -- RBAC++ (Role-Based Access Control with Field-Level Control)
 -- ============================================================
 
+-- Drop existing tables if they exist (in reverse dependency order)
+DROP TABLE IF EXISTS field_access_control CASCADE;
+DROP TABLE IF EXISTS role_permissions CASCADE;
+DROP TABLE IF EXISTS user_admin_roles CASCADE;
+DROP TABLE IF EXISTS admin_roles CASCADE;
+
 -- Admin Roles Table
-CREATE TABLE IF NOT EXISTS admin_roles (
+CREATE TABLE admin_roles (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(100) NOT NULL UNIQUE,
   description TEXT,
@@ -13,7 +19,7 @@ CREATE TABLE IF NOT EXISTS admin_roles (
 );
 
 -- Role Permissions Table (feature-level access)
-CREATE TABLE IF NOT EXISTS role_permissions (
+CREATE TABLE role_permissions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   role_id UUID NOT NULL REFERENCES admin_roles(id) ON DELETE CASCADE,
   resource VARCHAR(100) NOT NULL, -- users, leads, invoices, etc
@@ -23,7 +29,7 @@ CREATE TABLE IF NOT EXISTS role_permissions (
 );
 
 -- Field-Level Access Control
-CREATE TABLE IF NOT EXISTS field_access_control (
+CREATE TABLE field_access_control (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   role_id UUID NOT NULL REFERENCES admin_roles(id) ON DELETE CASCADE,
   resource VARCHAR(100) NOT NULL, -- leads, invoices, users, etc
@@ -35,7 +41,7 @@ CREATE TABLE IF NOT EXISTS field_access_control (
 );
 
 -- User to Role Assignment
-CREATE TABLE IF NOT EXISTS user_admin_roles (
+CREATE TABLE user_admin_roles (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   role_id UUID NOT NULL REFERENCES admin_roles(id) ON DELETE CASCADE,
@@ -48,7 +54,7 @@ CREATE TABLE IF NOT EXISTS user_admin_roles (
 -- ACTIVITY AUDIT LOG (Complete Action Tracking)
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS audit_logs (
+CREATE TABLE audit_logs (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES users(id),
   action VARCHAR(100) NOT NULL, -- create_lead, update_price, login, etc
@@ -77,7 +83,7 @@ CREATE INDEX idx_audit_logs_resource_name ON audit_logs(resource_name);
 -- AI MEMORY LAYER (Company Intelligence System)
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS ai_memory (
+CREATE TABLE ai_memory (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   company_id UUID,
   memory_type VARCHAR(50) NOT NULL, -- client, proposal, campaign, behavior
@@ -98,7 +104,7 @@ CREATE INDEX idx_ai_memory_success ON ai_memory(success_score DESC);
 -- CONVERSION OPTIMIZATION & ANALYTICS
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS page_analytics (
+CREATE TABLE page_analytics (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   page_url VARCHAR(500) NOT NULL,
   page_name VARCHAR(255),
@@ -113,7 +119,7 @@ CREATE TABLE IF NOT EXISTS page_analytics (
   UNIQUE(page_url)
 );
 
-CREATE TABLE IF NOT EXISTS conversion_events (
+CREATE TABLE conversion_events (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   page_url VARCHAR(500),
   event_type VARCHAR(100), -- button_click, form_submit, cta_click
@@ -129,7 +135,7 @@ CREATE INDEX idx_conversion_events_page ON conversion_events(page_url);
 -- LEAD SOURCE INTELLIGENCE
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS lead_source_analytics (
+CREATE TABLE lead_source_analytics (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   source VARCHAR(100) NOT NULL, -- SEO, paid_ads, referral, direct, email
   source_detail VARCHAR(255), -- which campaign, which ad, etc
@@ -147,7 +153,7 @@ CREATE TABLE IF NOT EXISTS lead_source_analytics (
 -- WORKFLOW AUTOMATION SYSTEM
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS workflows (
+CREATE TABLE workflows (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(255) NOT NULL,
   description TEXT,
@@ -164,7 +170,7 @@ CREATE TABLE IF NOT EXISTS workflows (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE IF NOT EXISTS workflow_executions (
+CREATE TABLE workflow_executions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   workflow_id UUID NOT NULL REFERENCES workflows(id) ON DELETE CASCADE,
   trigger_data JSONB,
@@ -181,7 +187,7 @@ CREATE INDEX idx_workflow_executions_workflow_id ON workflow_executions(workflow
 -- AI PROMPTS & PROMPT STUDIO
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS ai_prompts (
+CREATE TABLE ai_prompts (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(255) NOT NULL,
   category VARCHAR(100), -- proposal, email, social, content, etc
@@ -197,7 +203,7 @@ CREATE TABLE IF NOT EXISTS ai_prompts (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE IF NOT EXISTS prompt_versions (
+CREATE TABLE prompt_versions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   prompt_id UUID NOT NULL REFERENCES ai_prompts(id) ON DELETE CASCADE,
   version_number INTEGER NOT NULL,
@@ -207,7 +213,7 @@ CREATE TABLE IF NOT EXISTS prompt_versions (
   UNIQUE(prompt_id, version_number)
 );
 
-CREATE TABLE IF NOT EXISTS prompt_ab_tests (
+CREATE TABLE prompt_ab_tests (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   prompt_a_id UUID NOT NULL REFERENCES ai_prompts(id),
   prompt_b_id UUID NOT NULL REFERENCES ai_prompts(id),
@@ -223,7 +229,7 @@ CREATE TABLE IF NOT EXISTS prompt_ab_tests (
 -- PREDICTIONS & ML MODELS
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS predictions (
+CREATE TABLE predictions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   prediction_type VARCHAR(100), -- lead_conversion, churn_risk, contact_timing, upsell
   resource_type VARCHAR(100), -- leads, clients, invoices
@@ -244,7 +250,7 @@ CREATE INDEX idx_predictions_type ON predictions(prediction_type);
 -- AI AGENTS (Multi-Agent System)
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS ai_agents (
+CREATE TABLE ai_agents (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(100) NOT NULL, -- Sales AI, Marketing AI, Finance AI, Support AI
   agent_type VARCHAR(100) NOT NULL,
@@ -261,7 +267,7 @@ CREATE TABLE IF NOT EXISTS ai_agents (
 -- ACTIVITY FEED / REAL-TIME NOTIFICATIONS
 -- ============================================================
 
-CREATE TABLE IF NOT EXISTS activity_feed (
+CREATE TABLE activity_feed (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES users(id),
   activity_type VARCHAR(100), -- lead_updated, proposal_sent, invoice_paid
