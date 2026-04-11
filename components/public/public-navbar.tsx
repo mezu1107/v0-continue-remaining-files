@@ -74,8 +74,10 @@ export function PublicNavbar() {
   const handleLanguageChange = (langCode: string) => {
     setCurrentLanguage(langCode)
     localStorage.setItem("language", langCode)
-    // Reload page to apply language changes
-    window.location.reload()
+    // Dispatch event for other components to listen for language changes
+    window.dispatchEvent(
+      new CustomEvent("languageChanged", { detail: { language: langCode } })
+    )
   }
 
   const toggleTheme = () => {

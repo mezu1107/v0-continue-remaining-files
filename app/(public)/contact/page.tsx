@@ -23,12 +23,6 @@ import {
 } from "@/components/ui/select"
 import { ParticlesBackground } from "@/components/public/particles-background"
 import { toast } from "sonner"
-import { createClient } from "@/lib/supabase/client"
-
-// --------------------------
-// Supabase client
-// --------------------------
-const supabase = createClient()
 
 // --------------------------
 // Contact Info Section
@@ -99,45 +93,39 @@ export default function ContactPage() {
     setIsSubmitting(true)
 
     try {
-      // 1️⃣ Get current logged-in user
-      const {
-        data: { user },
-        error: userError,
-      } = await supabase.auth.getUser()
-
-      if (userError || !user) {
-        toast.error("You must be logged in to send a message.")
+      // Validate required fields
+      if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+        toast.error("Please fill in all required fields.")
         setIsSubmitting(false)
         return
       }
 
-      // 2️⃣ Insert lead into Supabase "leads" table
-      const { data, error } = await supabase
-        .from("leads")
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone || null, // optional phone
-            company: formData.company || null,
-            service: formData.service || null,
-            budget: formData.budget || null,
-            notes: { message: formData.message },
-            source: "contact_page",
-            status: "new", // always required, fixes previous error
-            created_by: user.id, // links lead to logged-in user
-          },
-        ])
-        .select()
+      // Send to backend API endpoint
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || null,
+          company: formData.company || null,
+          service: formData.service || null,
+          budget: formData.budget || null,
+          message: formData.message,
+        }),
+      })
 
-      if (error) throw error
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.message || "Failed to send message")
+      }
 
-      // 3️⃣ Show success
+      // Show success
       toast.success(
-        "Message sent successfully! We'll get back to you soon."
+        "Message sent successfully! We'll get back to you within 24 hours."
       )
 
-      // 4️⃣ Clear form
+      // Clear form
       setFormData({
         name: "",
         email: "",
@@ -147,10 +135,8 @@ export default function ContactPage() {
         budget: "",
         message: "",
       })
-
-      console.log("New lead saved:", data)
     } catch (err: any) {
-      console.error("Error submitting lead:", err)
+      console.error("Error submitting contact form:", err)
       toast.error(err.message || "Failed to send message. Try again.")
     } finally {
       setIsSubmitting(false)

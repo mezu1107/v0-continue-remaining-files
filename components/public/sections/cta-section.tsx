@@ -39,20 +39,15 @@ export function CTASection() {
             mobile app, or enterprise solution, we're here to help you succeed.
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Single Primary Action */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 transition-all glow-primary group px-8"
+                className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 transition-all glow-primary group px-8 w-full sm:w-auto"
               >
                 Start Your Project
                 <ArrowRight className="ml-2 size-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link href="/services">
-              <Button size="lg" variant="outline" className="px-8">
-                Explore Services
               </Button>
             </Link>
           </div>
